@@ -1,0 +1,5 @@
+mportamos o módulo http embutido no Node.js.
+Definimos o endereço IP e a porta onde o servidor irá escutar as solicitações.
+Criamos o servidor HTTP usando http.createServer(). Este método recebe uma função de retorno de chamada que é executada sempre que o servidor recebe uma solicitação HTTP.
+Dentro da função de retorno de chamada, configuramos o cabeçalho da resposta HTTP e escrevemos uma mensagem simples de "Olá, mundo!".
+Finalmente, iniciamos o servidor chamando o método server.listen() e passamos a porta, o endereço IP e uma função de retorno de chamada que imprime no console que o servidor está rodando
