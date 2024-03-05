@@ -1,0 +1,21 @@
+// Importa o módulo HTTP do Node.js
+const http = require('http');
+
+// Define o endereço IP e a porta para o servidor
+const hostname = '127.0.0.1';
+const port = 3000;
+
+// Cria o servidor HTTP
+const server = http.createServer((req, res) => {
+  // Configura o cabeçalho da resposta HTTP com o código de status e o tipo de conteúdo
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+
+  // Escreve uma resposta para o cliente
+  res.end('Olá, mundo! Este é um servidor HTTP básico em Node.js.\n');
+});
+
+// Inicia o servidor para escutar as solicitações HTTP
+server.listen(port, hostname, () => {
+  console.log(`Servidor rodando em http://${hostname}:${port}/`);
+});
